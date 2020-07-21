@@ -16,7 +16,7 @@ const AgregarCategoria = ({actualizarCategoria, categorias}) => {
       if(valor.trim()===''){
         actualzarError(true);
       } else {
-        actualizarCategoria([...categorias, valor]);
+        actualizarCategoria([valor, ...categorias]);
         actualzarError(false);
       }
       
