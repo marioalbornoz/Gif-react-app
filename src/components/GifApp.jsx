@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import AgregarCategoria from './AgregarCategoria';
+import GifGrid from './GifGrid';
 
 const GifApp = () => {
     // const categorias = ['One Puch', 'Hunter X', 'Dragon Ball']
-    const [categorias, actualizarCategoria] = useState(['One Puch', 'Hunter X', 'Dragon Ball']);
+    const [categorias, actualizarCategoria] = useState(['Steins Gate']);
 
     // const handleAdd = () => {
     //   actualizarCategoria([...categorias, "Steins Gate"]);
@@ -18,9 +19,12 @@ const GifApp = () => {
             <hr/>
             <ol>
             {
-                categorias.map(categoria => {
-                    return <li key={categoria}>{categoria}</li>
-                })
+                categorias.map(categoria => 
+                    (<GifGrid 
+                        key={categoria}
+                        categoria = {categoria}
+                    />)
+                )
             }
             </ol>
             
