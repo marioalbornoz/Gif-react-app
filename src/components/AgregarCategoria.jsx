@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const AgregarCategoria = ({actualizarCategoria, categorias}) => {
-    const [valor, agregarValor] = useState('Hola Mundo');
+    const [valor, agregarValor] = useState('');
     const [Error, actualzarError] = useState(false);
 
     // Toma el valor ingresado en el input y actuañiza el state
@@ -35,5 +36,10 @@ const AgregarCategoria = ({actualizarCategoria, categorias}) => {
       </form>
     );
 }
- 
+
+AgregarCategoria.propTypes = {
+    actualizarCategoria : PropTypes.func.isRequired,
+    categorias : PropTypes.array.isRequired
+}
+
 export default AgregarCategoria;
