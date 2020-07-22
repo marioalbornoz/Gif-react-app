@@ -17,6 +17,7 @@ const GifGrid = ({categoria}) => {
         {images.map(({ id, title, url }) => (
           <GifGridItem key={id} title={title} url={url} />
         ))}
+        <hr/>
       </div>
     );
 }
