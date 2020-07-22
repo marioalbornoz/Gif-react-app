@@ -10,14 +10,13 @@ const GifApp = () => {
     //   actualizarCategoria([...categorias, "Steins Gate"]);
     // };
     return ( 
-        <div>
-            <h2>GifApp</h2>
+        <div className="container">
+            <h2>Busca tu GIF</h2>
             <AgregarCategoria 
                 actualizarCategoria={actualizarCategoria}
                 categorias={categorias}
             />
             <hr/>
-            <ol>
             {
                 categorias.map(categoria => 
                     (<GifGrid 
@@ -26,7 +25,6 @@ const GifApp = () => {
                     />)
                 )
             }
-            </ol>
             
         </div>
     );

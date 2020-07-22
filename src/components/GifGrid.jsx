@@ -12,12 +12,12 @@ const GifGrid = ({categoria}) => {
     }, [categoria]);
 
     return (
-      <>
+      <div className="grid-card">
         <h2>{categoria}</h2>
         {images.map(({ id, title, url }) => (
           <GifGridItem key={id} title={title} url={url} />
         ))}
-      </>
+      </div>
     );
 }
  

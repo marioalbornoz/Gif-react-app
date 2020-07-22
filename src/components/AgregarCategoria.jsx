@@ -32,7 +32,7 @@ const AgregarCategoria = ({actualizarCategoria, categorias}) => {
             value={valor}
             onChange={cambioInput}
          />
-         <input type="submit" value="Agregar"/>
+         <input className="button" type="submit" value="Buscar"/>
       </form>
     );
 }
